@@ -4,7 +4,6 @@ class { 'varnish':
 
   varnish_listen_port => $varnish_values['varnish_listen_port'],
   varnish_storage_size => $varnish_values['varnish_storage_size'],
-  varnish_cli_buffer => $varnish_values['varnish_cli_buffer'],
 
 }
 

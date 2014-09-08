@@ -3,7 +3,7 @@ vagrantfile-local:
     vm:
         box: puphpet/centos65-x64
         box_url: puphpet/centos65-x64
-        hostname: 'localhost'
+        hostname: 'ice'
         memory: '1024'
         cpus: '1'
         chosen_provider: virtualbox
@@ -280,6 +280,5 @@ varnish:
   install: '1'
   settings:
     varnish_listen_port: '80'
-    varnish_storage_size: 1G
-    varnish_cli_buffer: 10000
+    varnish_storage_size: 256M
 
