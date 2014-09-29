@@ -1,0 +1,35 @@
+{
+  "summary": "Varnish module",
+  "project_page": "https://github.com/maxchk/puppet-varnish",
+  "author": "Max Horlanchuk <max.horlanchuk@gmail.com>",
+  "source": "UNKNOWN",
+  "types": [
+
+  ],
+  "name": "maxchk-varnish",
+  "description": "Install, configure and manage VCL",
+  "license": "Apache",
+  "version": "0.0.6",
+  "checksums": {
+    "tests/params.pp": "44bbfd219cfc0312ed11d04c1964ee7c",
+    "tests/vcl.pp": "1989c3f0fcca29aa6b384cfb8943ef03",
+    "manifests/install.pp": "9e7b7e1d53c7f360988cff755618708d",
+    "LICENSE": "0e5ccf641e613489e66aa98271dbe798",
+    "manifests/shmlog.pp": "f9fa91603c22c294d2212318fd7dc76d",
+    "Modulefile": "603ef791f4ee9d54533828037899d832",
+    "manifests/vcl.pp": "96bbdbeff29558d007dbdcb5e12a3758",
+    "manifests/service.pp": "a6c6924c76180e600f9a15ae8764880e",
+    "templates/varnish-vcl.erb": "d5c6780addfcc2b66bb4d5c54495c6fc",
+    "tests/init.pp": "67bf92b5b6453d90daaa1da2efe307dd",
+    "tests/service.pp": "47c7272262254406fcc0acc74cd40c93",
+    "tests/shmlog.pp": "a58e028bc35dc260497b18e4c8c45276",
+    "manifests/init.pp": "29596181c5310dddd901c40e890d9b4a",
+    "README.md": "926678f9a566d94ef3eadeccaf93c045",
+    "manifests/params.pp": "561903a0382110cb4ac29c884377a5f3",
+    "tests/install.pp": "3d236f7f5e7bac59fde358492ee58b3b",
+    "templates/varnish-conf.erb": "5fdd19098a14998fbb2b63a30f0a4df8"
+  },
+  "dependencies": [
+
+  ]
+}
