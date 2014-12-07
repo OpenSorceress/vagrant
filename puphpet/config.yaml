@@ -4,7 +4,7 @@ vagrantfile-local:
         box: puphpet/centos65-x64
         box_url: puphpet/centos65-x64
         hostname: 'ice'
-        memory: '1024'
+        memory: '2048'
         cpus: '1'
         chosen_provider: virtualbox
         network:
@@ -13,7 +13,7 @@ vagrantfile-local:
                 9AXoPuSQE8bL:
                     host: '5863'
                     guest: '22'
-        post_up_message: ''
+        post_up_message: 'vagrant box finished spinning up'
         provider:
             virtualbox:
                 modifyvm:
@@ -119,11 +119,11 @@ nginx:
         proxy_buffers: '4 256k'
     vhosts:
         hp0kGrjhMDaK:
-            server_name: ice-new.dev
+            server_name: ice.dev
             server_aliases:
-                - www.ice-new.dev
-                - dev.ice-new.com
-            www_root: /var/www/html/ice.new
+                - www.ice.dev
+                - dev.ice.com
+            www_root: /var/www/html/ice.com
             listen_port: '8080'
             location: \.php$
             index_files:
@@ -140,7 +140,7 @@ php:
     install: '1'
     version: '55'
     composer: '1'
-    composer_home: ''
+    composer_home: '/var/www/html/ice.com/'
     modules:
         php:
             - cli
@@ -196,7 +196,6 @@ nodejs:
         - grunt
         - bower
         - sails
-        - sails-mysql
         - forever
 python:
     install: '1'
@@ -205,18 +204,10 @@ python:
         gKaIirRitaJ9:
             version: ''
 mysql:
-    install: '1'
+    install: '0'
     root_password: vagrant
     adminer: 0
-    databases:
-        BP2kiUEZR2qM:
-            grant:
-                - ALL
-            name: magento
-            host: localhost
-            user: vagrant
-            password: vagrant
-            sql_file: ''
+    databases: {  }
 postgresql:
     install: '0'
     settings:
@@ -227,10 +218,18 @@ postgresql:
     databases: {  }
     adminer: 0
 mariadb:
-    install: '0'
-    root_password: '123'
+    install: '1'
+    root_password: 'vagrant'
     adminer: 0
-    databases: {  }
+    databases:
+        BP2kiUEZR2qM:
+            grant:
+                - ALL
+            name: magento
+            host: localhost
+            user: vagrant
+            password: vagrant
+            sql_file: ''
     version: '10.0'
 sqlite:
     install: '0'
