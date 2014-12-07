@@ -123,7 +123,7 @@ nginx:
             server_aliases:
                 - www.ice.dev
                 - dev.ice.com
-            www_root: /var/www/html/ice.com
+            www_root: /var/www/html/ice
             listen_port: '8080'
             location: \.php$
             index_files:
@@ -140,7 +140,7 @@ php:
     install: '1'
     version: '55'
     composer: '1'
-    composer_home: '/var/www/html/ice.com/'
+    composer_home: ''
     modules:
         php:
             - cli
