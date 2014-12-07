@@ -3,8 +3,8 @@ vagrantfile-local:
     vm:
         box: puphpet/centos65-x64
         box_url: puphpet/centos65-x64
-        hostname: 'ice.dev'
-        memory: '2048'
+        hostname: 'ice'
+        memory: '1024'
         cpus: '1'
         chosen_provider: virtualbox
         network:
@@ -76,7 +76,7 @@ server:
         - ack
         - screen
 firewall:
-    install: '0'
+    install: '1'
     rules: null
 apache:
     install: 0
@@ -119,11 +119,11 @@ nginx:
         proxy_buffers: '4 256k'
     vhosts:
         hp0kGrjhMDaK:
-            server_name: ice.dev
+            server_name: ice-new.dev
             server_aliases:
-                - www.ice.dev
-                - dev.ice.com
-            www_root: /var/www/html/ice.dev
+                - www.ice-new.dev
+                - dev.ice-new.com
+            www_root: /var/www/html/ice.new
             listen_port: '8080'
             location: \.php$
             index_files:
@@ -196,6 +196,7 @@ nodejs:
         - grunt
         - bower
         - sails
+        - sails-mysql
         - forever
 python:
     install: '1'
@@ -236,7 +237,7 @@ sqlite:
     adminer: 0
     databases: {  }
 mongodb:
-    install: '1'
+    install: '0'
     settings:
         auth: 1
         port: '27017'
@@ -275,16 +276,3 @@ elastic_search:
     settings:
         java_install: true
         autoupgrade: true
-varnish:
-  install: '1'
-  settings:
-    start: yes
-    backend_name: default
-    backend_port: '8080'
-    backend_host: '127.0.0.1'
-    storage_size: 1G
-    nfiles: '131072'
-    memlock: '82000'
-    storage_type: malloc
-    varnish_listen_port: 80
-    varnish_listen_address: ''
