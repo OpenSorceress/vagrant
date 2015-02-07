@@ -4,7 +4,7 @@ vagrantfile-local:
         box: puphpet/centos65-x64
         box_url: puphpet/centos65-x64
         hostname: 'ice'
-        memory: '2048'
+        memory: '4096'
         cpus: '1'
         chosen_provider: virtualbox
         network:
@@ -140,7 +140,7 @@ php:
     install: '1'
     version: '55'
     composer: '1'
-    composer_home: ''
+    composer_home: '/usr/local/bin/'
     modules:
         php:
             - cli
@@ -152,6 +152,8 @@ php:
         pear: {  }
         pecl:
             - pecl_http
+            - pecl_jsonc
+            - pecl_redis
     ini:
         display_errors: On
         error_reporting: '-1'

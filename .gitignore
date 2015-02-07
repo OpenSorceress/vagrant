@@ -3,3 +3,5 @@
 #.vagrant/
 atlassian-ide-plugin.xml
 .idea/
+*.iml
+package.box
