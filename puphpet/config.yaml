@@ -139,7 +139,7 @@ nginx:
 php:
     install: '1'
     version: '55'
-    composer: '1'
+    composer: '0'
     composer_home: '/usr/local/bin/'
     modules:
         php:
@@ -163,7 +163,7 @@ php:
 hhvm:
     install: '0'
     nightly: 0
-    composer: '1'
+    composer: '0'
     composer_home: ''
     settings:
         host: 127.0.0.1
