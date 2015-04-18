@@ -152,7 +152,6 @@ php:
         pear: {  }
         pecl:
             - pecl_http
-            - pecl_jsonc
             - pecl_redis
     ini:
         display_errors: On
@@ -220,7 +219,7 @@ postgresql:
     databases: {  }
     adminer: 0
 mariadb:
-    install: '1'
+    install: '0'
     root_password: 'vagrant'
     adminer: 0
     databases:
