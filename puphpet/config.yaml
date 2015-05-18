@@ -3,9 +3,9 @@ vagrantfile-local:
     vm:
         box: puphpet/centos65-x64
         box_url: puphpet/centos65-x64
-        hostname: 'ice'
+        hostname: 'puphpet-centos'
         memory: '4096'
-        cpus: '1'
+        cpus: '2'
         chosen_provider: virtualbox
         network:
             private_network: 192.168.56.101
@@ -45,8 +45,8 @@ vagrantfile-local:
                         - .vagrant/
                     auto: 'false'
             JX0NQgrYGA3k:
-                source: /var/www/html/
-                target: /var/www/html/
+                source: /var/www/
+                target: /var/www/
                 sync_type: default
                 rsync:
                     auto: 'true'
@@ -119,11 +119,11 @@ nginx:
         proxy_buffers: '4 256k'
     vhosts:
         hp0kGrjhMDaK:
-            server_name: ice.dev
+            server_name: localhost.dev
             server_aliases:
-                - www.ice.dev
-                - dev.ice.com
-            www_root: /var/www/html/ice
+                - www.loccalhost.dev
+                - dev.localhost.com
+            www_root: /var/www/
             listen_port: '8080'
             location: \.php$
             index_files:
@@ -152,7 +152,6 @@ php:
         pear: {  }
         pecl:
             - pecl_http
-            - pecl_redis
     ini:
         display_errors: On
         error_reporting: '-1'
